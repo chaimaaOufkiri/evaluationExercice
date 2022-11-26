@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
+
+
 
 namespace evaluationExercice
 {
@@ -15,7 +18,7 @@ namespace evaluationExercice
         }
         class question
         {
-            public float nbr;
+            public string ques;
         }
 
         class proposition
@@ -70,8 +73,12 @@ namespace evaluationExercice
                 return note;
             }
         }
-        static void Main(string[] args)
+        static void Main()
         {
+           
+            Application.EnableVisualStyles();
+            Application.SetCompatibleTextRenderingDefault(false);
+            Application.Run(new Form2());
         }
     }
 }
