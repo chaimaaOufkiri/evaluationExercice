@@ -29,41 +29,23 @@ namespace evaluationExercice
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.btnAdd = new System.Windows.Forms.Button();
-            this.btnCancel = new System.Windows.Forms.Button();
-            this.txtQuestion = new System.Windows.Forms.TextBox();
+            this.btnAdd3 = new System.Windows.Forms.Button();
+            this.btnCancel3 = new System.Windows.Forms.Button();
             this.txtProposition1 = new System.Windows.Forms.TextBox();
             this.txtProposition2 = new System.Windows.Forms.TextBox();
             this.txtProposition3 = new System.Windows.Forms.TextBox();
+            this.btnAfficher3 = new System.Windows.Forms.Button();
+            this.dataGridView3 = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(338, 48);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(45, 20);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "QCM";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(184, 111);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(73, 20);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Question";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(184, 170);
+            this.label3.Location = new System.Drawing.Point(43, 22);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(101, 20);
             this.label3.TabIndex = 2;
@@ -72,7 +54,7 @@ namespace evaluationExercice
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(184, 230);
+            this.label4.Location = new System.Drawing.Point(43, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(101, 20);
             this.label4.TabIndex = 3;
@@ -81,95 +63,107 @@ namespace evaluationExercice
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(184, 284);
+            this.label5.Location = new System.Drawing.Point(43, 171);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(101, 20);
             this.label5.TabIndex = 4;
             this.label5.Text = "Proposition 3";
             // 
-            // btnAdd
+            // btnAdd3
             // 
-            this.btnAdd.Location = new System.Drawing.Point(210, 360);
-            this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(75, 63);
-            this.btnAdd.TabIndex = 5;
-            this.btnAdd.Text = "Add";
-            this.btnAdd.UseVisualStyleBackColor = true;
-            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            this.btnAdd3.Location = new System.Drawing.Point(60, 258);
+            this.btnAdd3.Name = "btnAdd3";
+            this.btnAdd3.Size = new System.Drawing.Size(97, 63);
+            this.btnAdd3.TabIndex = 5;
+            this.btnAdd3.Text = "Add";
+            this.btnAdd3.UseVisualStyleBackColor = true;
+            this.btnAdd3.Click += new System.EventHandler(this.btnAdd3_Click);
             // 
-            // btnCancel
+            // btnCancel3
             // 
-            this.btnCancel.Location = new System.Drawing.Point(525, 360);
-            this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(75, 63);
-            this.btnCancel.TabIndex = 6;
-            this.btnCancel.Text = "Cancel";
-            this.btnCancel.UseVisualStyleBackColor = true;
-            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
-            // 
-            // txtQuestion
-            // 
-            this.txtQuestion.Location = new System.Drawing.Point(387, 105);
-            this.txtQuestion.Name = "txtQuestion";
-            this.txtQuestion.Size = new System.Drawing.Size(262, 26);
-            this.txtQuestion.TabIndex = 7;
+            this.btnCancel3.Location = new System.Drawing.Point(327, 258);
+            this.btnCancel3.Name = "btnCancel3";
+            this.btnCancel3.Size = new System.Drawing.Size(75, 63);
+            this.btnCancel3.TabIndex = 6;
+            this.btnCancel3.Text = "Cancel";
+            this.btnCancel3.UseVisualStyleBackColor = true;
+            this.btnCancel3.Click += new System.EventHandler(this.btnCancel3_Click);
             // 
             // txtProposition1
             // 
-            this.txtProposition1.Location = new System.Drawing.Point(387, 154);
+            this.txtProposition1.Location = new System.Drawing.Point(171, 16);
             this.txtProposition1.Name = "txtProposition1";
             this.txtProposition1.Size = new System.Drawing.Size(262, 26);
             this.txtProposition1.TabIndex = 8;
             // 
             // txtProposition2
             // 
-            this.txtProposition2.Location = new System.Drawing.Point(387, 224);
+            this.txtProposition2.Location = new System.Drawing.Point(171, 81);
             this.txtProposition2.Name = "txtProposition2";
             this.txtProposition2.Size = new System.Drawing.Size(262, 26);
             this.txtProposition2.TabIndex = 9;
             // 
             // txtProposition3
             // 
-            this.txtProposition3.Location = new System.Drawing.Point(387, 284);
+            this.txtProposition3.Location = new System.Drawing.Point(171, 156);
             this.txtProposition3.Name = "txtProposition3";
             this.txtProposition3.Size = new System.Drawing.Size(262, 26);
             this.txtProposition3.TabIndex = 10;
+            // 
+            // btnAfficher3
+            // 
+            this.btnAfficher3.Location = new System.Drawing.Point(627, 220);
+            this.btnAfficher3.Name = "btnAfficher3";
+            this.btnAfficher3.Size = new System.Drawing.Size(75, 57);
+            this.btnAfficher3.TabIndex = 11;
+            this.btnAfficher3.Text = "Afficher";
+            this.btnAfficher3.UseVisualStyleBackColor = true;
+            this.btnAfficher3.Click += new System.EventHandler(this.btnAfficher3_Click);
+            // 
+            // dataGridView3
+            // 
+            this.dataGridView3.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView3.Location = new System.Drawing.Point(495, 16);
+            this.dataGridView3.Name = "dataGridView3";
+            this.dataGridView3.RowHeadersWidth = 62;
+            this.dataGridView3.RowTemplate.Height = 28;
+            this.dataGridView3.Size = new System.Drawing.Size(293, 165);
+            this.dataGridView3.TabIndex = 12;
             // 
             // Form4
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(800, 573);
+            this.Controls.Add(this.dataGridView3);
+            this.Controls.Add(this.btnAfficher3);
             this.Controls.Add(this.txtProposition3);
             this.Controls.Add(this.txtProposition2);
             this.Controls.Add(this.txtProposition1);
-            this.Controls.Add(this.txtQuestion);
-            this.Controls.Add(this.btnCancel);
-            this.Controls.Add(this.btnAdd);
+            this.Controls.Add(this.btnCancel3);
+            this.Controls.Add(this.btnAdd3);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Name = "Form4";
             this.Text = "Form4";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button btnCancel;
-        private System.Windows.Forms.TextBox txtQuestion;
+        private System.Windows.Forms.Button btnAdd3;
+        private System.Windows.Forms.Button btnCancel3;
         private System.Windows.Forms.TextBox txtProposition1;
         private System.Windows.Forms.TextBox txtProposition2;
         private System.Windows.Forms.TextBox txtProposition3;
+        private System.Windows.Forms.Button btnAfficher3;
+        private System.Windows.Forms.DataGridView dataGridView3;
     }
 }

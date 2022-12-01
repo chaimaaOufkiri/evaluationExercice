@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data.OleDb;
+using System.Data.SqlClient;
 
 namespace evaluationExercice
 {
@@ -17,29 +17,37 @@ namespace evaluationExercice
         {
             InitializeComponent();
         }
-        static string chaine = @"Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\User\Documents\Evaluation.accdb";
-        static OleDbConnection cnx = new OleDbConnection(chaine);
-        static OleDbCommand cmd = new OleDbCommand();
-        static OleDbDataAdapter adapter = new OleDbDataAdapter(cmd);
+        
+        static string chaine = @" Data Source=DESKTOP-6C4KUDE\SQLEXPRESS;Initial Catalog=ExerciceEvaluation;Integrated Security=True";
+        static SqlConnection cnx = new SqlConnection(chaine);
+        static SqlCommand cmd = new SqlCommand();
+        static SqlDataAdapter adapter = new SqlDataAdapter(cmd);
 
-        private void btnAdd_Click(object sender, EventArgs e)
+        private void btnAdd3_Click(object sender, EventArgs e)
         {
             cnx.Open();
             cmd.Connection = cnx;
-            cmd.CommandText = "insert into QCM( Question) values('" + txtQuestion.Text + ") ";
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "insert into Proposition( Proposition1) values('" + txtProposition1.Text + ") ";
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "insert into Proposition( Proposition2) values('" + txtProposition2.Text + ") ";
-            cmd.ExecuteNonQuery();
-            cmd.CommandText = "insert into Proposition( Proposition2) values('" + txtProposition3.Text + ") ";
+            cmd.CommandText = "insert into Proposition( question,choix1, choix2, choix3) values('','" + txtProposition1.Text + "','" + txtProposition2.Text + "','" + txtProposition3.Text + "') ";
             cmd.ExecuteNonQuery();
             cnx.Close();
         }
 
-        private void btnCancel_Click(object sender, EventArgs e)
+        private void btnCancel3_Click(object sender, EventArgs e)
         {
+            cnx.Open();
+            cmd.Connection = cnx;
+            cmd.CommandText = "insert into Proposition( question,choix1, choix2, choix3) values('','" + txtProposition1.Text + "','" + txtProposition2.Text + "','" + txtProposition3.Text + "') ";
             cnx.Close();
+        }
+        
+        private void btnAfficher3_Click(object sender, EventArgs e)
+        {
+            cmd.CommandText = "select * from Proposition ";
+            adapter.SelectCommand = cmd;
+            DataTable dt = new DataTable();
+            dt.Clear();
+            adapter.Fill(dt);
+            dataGridView3.DataSource = dt;
         }
     }
 }
